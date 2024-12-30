@@ -100,6 +100,8 @@
         const form = event.target;
         const formContainer = document.querySelector(".form-container");
 
+        formContainer.innerHTML = "<p>🤘 Thank you!</p>";
+
         try {
           const response = await fetch(form.action, {
             method: "POST",
@@ -112,7 +114,6 @@
         } catch (error) {
           console.error("Error:", error);
         }
-        formContainer.innerHTML = "<p>🤘 Thank you!</p>";
       }
     </script>
   </head>
@@ -121,7 +122,7 @@
     <p>New music, coming soon. Let's keep in touch!</p>
     <div class="form-container">
       <form
-        action="https://script.google.com/macros/s/AKfycbx-4EQ_NbXhQegPpzsjv4N1alpkN12YXHRMxN2g7_lVSmkUun6Txy7ZT9ftwYhGtGf3RQ/exec"
+        action="https://script.google.com/macros/s/AKfycbxyOIsagjAM2clQZ7OOVaFHSjUiKJxe3mc6lFHPavrZAPDJHUdbWzqTO27U8OVJw1eoQw/exec"
         method="post"
         onsubmit="handleFormSubmit(event)"
       >
