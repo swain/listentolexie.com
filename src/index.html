@@ -1,96 +1,114 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>"
-    />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexie</title>
 
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato"
     />
 
-    <title>Lexie</title>
-
     <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #979bfa;
-        padding-left: 1em;
-        padding-right: 1em;
-      }
-
-      #headshot {
-        aspect-ratio: 657 / 191;
-        width: 30em;
-        border-radius: 1em;
-        margin-top: 2em;
-        margin-bottom: 2em;
-      }
-
-      span {
-        font-family: "Lato";
-        font-size: 24px;
-        font-weight: 900;
-        color: black;
-      }
-
-      a {
-        color: black;
-      }
-
-      #social-row {
-        flex-direction: row;
-      }
-
-      #social-icon {
-        width: 32px;
-        height: 32px;
-        margin-right: 1em;
-      }
-
-      /* Desktop Styles */
-      @media (min-width: 600px) {
         body {
-          padding-left: 10%;
+            font-family: Lato, sans-serif;
+            background-color: #979bfa;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
         }
-      }
-    </style>
-  </head>
 
-  <body>
+        p {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container form {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: white;
+            color: #979bfa;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+
+        button:active {
+            background-color: #dcdcdc;
+        }
+
+        .socials {
+            margin-top: 40px;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .socials img {
+            width: 48px;
+            height: 48px;
+        }
+    </style>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formContainer = document.querySelector('.form-container');
+            formContainer.innerHTML = '<p>🤘 Thank you!</p>';
+        }
+    </script>
+</head>
+<body>
     <img
       id="headshot"
       src="./img/lexie.png"
       alt="the lexie logo"
     />
-    <span>Send in your email </span>
-    <br />
-    <br />
-    <form 
-      method="POST" 
-      action="https://script.google.com/macros/s/AKfycbx-4EQ_NbXhQegPpzsjv4N1alpkN12YXHRMxN2g7_lVSmkUun6Txy7ZT9ftwYhGtGf3RQ/exec"
-    >
-      <input name="Email" type="email" placeholder="Email" required>
-      <button type="submit">Send</button>
-    </form>
-    <span
-      >I'm currently building products at Fountain Life.
-      <a href="https://www.github.com/fountainlife">Check us out!</a></span
-    >
-    <br />
-    <br />
-    <div id="social-row">
-      <a href="https://open.spotify.com/artist/7D2KQfarTgZWkIFCojcCP6"
-        ><img id="social-icon" src="./img/spotify.png"
-      /></a>
-      <a href="https://instagram.com/lexietheband"
-        ><img id="social-icon" src="./img/instagram.png"
-      /></a>
+    <p>New music coming soon, give us your email to keep in touch!</p>
+    <div class="form-container">
+        <form action="https://script.google.com/macros/s/AKfycbx-4EQ_NbXhQegPpzsjv4N1alpkN12YXHRMxN2g7_lVSmkUun6Txy7ZT9ftwYhGtGf3RQ/exec" method="post" onsubmit="handleFormSubmit(event)">
+            <input type="email" name="Email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </form>
     </div>
-  </body>
+    <div class="socials">
+        <a href="https://open.spotify.com/artist/7D2KQfarTgZWkIFCojcCP6" target="_blank">
+            <img src="./img/spotify.png" alt="Spotify">
+        </a>
+        <a href="https://instagram.com/lexietheband" target="_blank">
+            <img src="./img/instagram.png" alt="Instagram">
+        </a>
+    </div>
+</body>
 </html>
