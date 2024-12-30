@@ -12,22 +12,22 @@
       href="https://fonts.googleapis.com/css?family=Lato"
     />
 
-    <title>swain.codes</title>
+    <title>Lexie</title>
 
     <style>
       body {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        background-color: #f8f8f8;
+        align-items: center;
+        background-color: #979bfa;
         padding-left: 1em;
         padding-right: 1em;
       }
 
       #headshot {
+        aspect-ratio: 657 / 191;
+        width: 30em;
         border-radius: 1em;
-        width: 30vw;
-        height: 30vw;
         margin-top: 2em;
         margin-bottom: 2em;
       }
@@ -58,11 +58,6 @@
         body {
           padding-left: 10%;
         }
-
-        #headshot {
-          width: 250px;
-          height: 250px;
-        }
       }
     </style>
   </head>
@@ -70,32 +65,31 @@
   <body>
     <img
       id="headshot"
-      src="./img/me.jpg"
-      alt="A picture of me looking fancier than usual"
+      src="./img/lexie.png"
+      alt="the lexie logo"
     />
-    <span>Hi, I'm Swain! I'm a software engineer. 🙂</span>
+    <span>Send in your email </span>
     <br />
     <br />
+    <form 
+      method="POST" 
+      action="https://script.google.com/macros/s/AKfycbx-4EQ_NbXhQegPpzsjv4N1alpkN12YXHRMxN2g7_lVSmkUun6Txy7ZT9ftwYhGtGf3RQ/exec"
+    >
+      <input name="Email" type="email" placeholder="Email" required>
+      <button type="submit">Send</button>
+    </form>
     <span
       >I'm currently building products at Fountain Life.
       <a href="https://www.github.com/fountainlife">Check us out!</a></span
     >
     <br />
     <br />
-    <span
-      >If you'd like to get in touch, feel free to
-      <a href="mailto:swain.molster@gmail.com">send me an email</a>.
-    </span>
-
-    <br />
-    <br />
-
     <div id="social-row">
-      <a href="https://www.github.com/swain"
-        ><img id="social-icon" src="./img/github.png"
+      <a href="https://open.spotify.com/artist/7D2KQfarTgZWkIFCojcCP6"
+        ><img id="social-icon" src="./img/spotify.png"
       /></a>
-      <a href="https://www.linkedin.com/in/swain-molster/"
-        ><img id="social-icon" src="./img/linkedin.png"
+      <a href="https://instagram.com/lexietheband"
+        ><img id="social-icon" src="./img/instagram.png"
       /></a>
     </div>
   </body>
