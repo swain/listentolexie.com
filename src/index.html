@@ -20,8 +20,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            margin: 20px;
             text-align: center;
+            gap: 20px
         }
 
         p {
@@ -31,11 +32,12 @@
 
         .form-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 300px;
         }
 
         .form-container form {
             display: flex;
+            flex-direction: column;
             gap: 10px;
         }
 
@@ -80,6 +82,11 @@
             width: 48px;
             height: 48px;
         }
+        
+        #headshot {
+          width: 100%;
+          max-width: 400px;
+        }
     </style>
     <script>
         function handleFormSubmit(event) {
@@ -95,7 +102,7 @@
       src="./img/lexie.png"
       alt="the lexie logo"
     />
-    <p>New music coming soon, give us your email to keep in touch!</p>
+    <p>New music, coming soon. Let's keep in touch!</p>
     <div class="form-container">
         <form action="https://script.google.com/macros/s/AKfycbx-4EQ_NbXhQegPpzsjv4N1alpkN12YXHRMxN2g7_lVSmkUun6Txy7ZT9ftwYhGtGf3RQ/exec" method="post" onsubmit="handleFormSubmit(event)">
             <input type="email" name="Email" placeholder="Enter your email" required>
